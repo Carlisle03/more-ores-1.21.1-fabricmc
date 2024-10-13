@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "more-ores",
+	"version": "${version}",
+	"name": "More Ores",
+	"description": "This is a mod that adds more ores",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/more-ores/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"carlisle.moreores.MoreOres"
+		],
+		"client": [
+			"carlisle.moreores.MoreOresClient"
+		]
+	},
+	"mixins": [
+		"more-ores.mixins.json",
+		{
+			"config": "more-ores.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
